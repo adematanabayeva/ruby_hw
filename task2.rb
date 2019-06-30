@@ -8,9 +8,10 @@ puts 'c:'
 c = gets.chomp.to_f
 
 ar = [a, b, c]
-longside = ar.sort[2]
-first = ar.sort[0]
-second = ar.sort[1]
+newL = ar.sort
+longside = newL[2]
+first = newL[0]
+second = newL[1]
 if first == second
 	triangle = 'равнобедренный'
 else 
@@ -18,5 +19,8 @@ else
 end
 
 if longside ** 2 == (first ** 2) + (second ** 2)
-	puts 'треугольник прямоугольный' + triangle
+	puts 'треугольник прямоугольный ' + triangle
+elsif a == b and b == c
+	puts 'треугольник равносторонний ' + triangle
+	
 end
