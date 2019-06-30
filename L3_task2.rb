@@ -17,10 +17,8 @@ if first == second
 else 
 	triangle = ''
 end
-
 if longside ** 2 == (first ** 2) + (second ** 2)
 	puts 'треугольник прямоугольный ' + triangle
 elsif a == b and b == c
 	puts 'треугольник равносторонний ' + triangle
-	
 end
