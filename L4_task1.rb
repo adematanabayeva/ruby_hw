@@ -4,5 +4,5 @@
 # months = Date::ABBR_MONTHNAMES
 # mdays = [nil,31,28,31,30,31,30,31,31,30,31,30,31]
 # puts months, mdays
-year = {Jan: 31, Feb: 28, Mar: 31, Apr: 30, May: 31, Jun: 30, Jul: 31, Aug: 31, Sep: 30, Oct: 31, Nov: 30, Dec: 31}
+year = {jan: 31, feb: 28, mar: 31, apr: 30, may: 31, jun: 30, jul: 31, aug: 31, sep: 30, oct: 31, nov: 30, dec: 31}
 year.each {|month, day| puts month if day == 30}
