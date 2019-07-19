@@ -6,12 +6,11 @@
 # а значением - вложенный хэш, содержащий цену за единицу товара и кол-во купленного товара. 
 # Также вывести итоговую сумму за каждый товар.
 # Вычислить и вывести на экран итоговую сумму всех покупок в "корзине".
-shopCart = Hash.new #{ |hash, key| hash[key] =  }
+shop_сart = Hash.new #{ |hash, key| hash[key] =  }
 sum = 0
 i = 0
-# while name != 'stop' do 
-#for i in 1..2
-begin
+
+loop do
 	print 'Name: '
 	name = gets.chomp
 	break if name == 'stop'
@@ -20,11 +19,10 @@ begin
 	price = gets.chomp.to_f
 
 	print 'Quantity: '
-	q = gets.chomp.to_f
+	quantity = gets.chomp.to_f
 	i += 1
-	#shopCart = { name: [{'price': price, 'Quantity': q}]}
-	shopCart[name] = {'price': price, 'Quantity': q}
-	sum += price * q
-end while name != 'stop'
-p shopCart
+	shop_сart[name] = {price: price, quantity: quantity, total: price * quantity}
+	sum += price * quantity
+end
+p shop_сart
 p sum
